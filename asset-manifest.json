@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tlx-checklist/static/css/main.c8211482.css",
-    "main.js": "/tlx-checklist/static/js/main.2c5fc042.js",
-    "static/js/787.e29e5a51.chunk.js": "/tlx-checklist/static/js/787.e29e5a51.chunk.js",
-    "index.html": "/tlx-checklist/index.html",
-    "main.c8211482.css.map": "/tlx-checklist/static/css/main.c8211482.css.map",
-    "main.2c5fc042.js.map": "/tlx-checklist/static/js/main.2c5fc042.js.map",
-    "787.e29e5a51.chunk.js.map": "/tlx-checklist/static/js/787.e29e5a51.chunk.js.map"
+    "main.css": "/TLX-Checklist/static/css/main.c8211482.css",
+    "main.js": "/TLX-Checklist/static/js/main.dcac1627.js",
+    "static/js/787.e29e5a51.chunk.js": "/TLX-Checklist/static/js/787.e29e5a51.chunk.js",
+    "index.html": "/TLX-Checklist/index.html",
+    "main.c8211482.css.map": "/TLX-Checklist/static/css/main.c8211482.css.map",
+    "main.dcac1627.js.map": "/TLX-Checklist/static/js/main.dcac1627.js.map",
+    "787.e29e5a51.chunk.js.map": "/TLX-Checklist/static/js/787.e29e5a51.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8211482.css",
-    "static/js/main.2c5fc042.js"
+    "static/js/main.dcac1627.js"
   ]
 }
