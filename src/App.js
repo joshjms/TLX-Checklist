@@ -34,6 +34,12 @@ function App() {
         );
     });
 
+    const UpdateScores = (i, v) => {
+        let newUsers = users.slice();
+        newUsers[i] = v;
+        
+    }
+
     return (
         <div className="mx-[10%] my-10 overflow-x-scroll">
             <h1 className="text-5xl text-center my-10 font-bold">Scoreboard</h1>
