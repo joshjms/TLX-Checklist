@@ -1,7 +1,7 @@
 {
     "name": "tlx-checklist",
     "version": "0.1.0",
-    "homepage": "https://joshjms.github.io/tlx-checklist",
+    "homepage": "https://joshjms.github.io/TLX-Checklist",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.10.4",
