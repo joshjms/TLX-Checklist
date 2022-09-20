@@ -16,24 +16,9 @@ const Users = [
     },
     {
         id: 3,
-        name: "Arnold Ardianto",
-        handle: "fonmagnus",
-    },
-    {
-        id: 4,
-        name: "Maximilliano Utomo Quok",
-        handle: "maximath_1",
-    },
-    {
-        id: 5,
         name: "Joshua Adrian Cahyono",
         handle: "JvThunder",
-    },
-    {
-        id: 6,
-        name: "Pikatan Arya Bramajati",
-        handle: "Pyqe",
-    },
+    }
 ];
 
 export default Users;

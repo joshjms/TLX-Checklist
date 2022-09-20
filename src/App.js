@@ -6,8 +6,13 @@ import Problemsets from "./shared/Problemsets.js";
 
 import TableBody from "./components/TableBody";
 
+console.log(Users);
+
+let userList = Users.slice();
+let userSorted = [];
+
 function App() {
-    const [users, setUsers] = useState(Users);
+    const [users, setUsers] = useState(userList);
     const [search, setSearch] = useState("");
 
     let TableHead = Problemsets.map((problemset) => {
@@ -34,27 +39,40 @@ function App() {
         );
     });
 
-    const UpdateScores = (i, v) => {
-        let newUsers = users.slice();
-        newUsers[i] = v;
-        
-    }
+    useEffect(() => {
+        userList.forEach((e) => (e.total = 0));
+    }, []);
+
+    const onUpdateScores = (i, v) => {
+        let newUsers = userList.slice();
+        newUsers[i].total = v;
+        userList = [...newUsers];
+        userSorted = [...userList].sort((a, b) => {
+            return b.total - a.total;
+        });
+        setUsers(
+            userSorted.filter((user) => {
+                return user.handle.startsWith(search);
+            })
+        );
+    };
 
     return (
-        <div className="mx-[10%] my-10 overflow-x-scroll">
+        <>  
             <h1 className="text-5xl text-center my-10 font-bold">Scoreboard</h1>
-            <div className="form-control">
-                <div className="input-group">
+            <div className="form-control w-[40%] m-auto">
+                <div className="input-group m-auto">
                     <input
                         type="text"
                         placeholder="Search…"
-                        className="input input-bordered w-full max-w-xs"
+                        className="input input-bordered w-full"
                         onChange={(e) => {
                             setSearch(e.target.value);
-                            let filteredUsers = Users.filter((user) => {
+                            console.log(e.target.value);
+                            let filteredUsers = userSorted.filter((user) => {
                                 return user.handle.startsWith(e.target.value);
                             });
-                            setUsers(filteredUsers);
+                            setUsers(filteredUsers.slice());
                         }}
                     />
                     <button className="btn btn-square">
@@ -75,15 +93,17 @@ function App() {
                     </button>
                 </div>
             </div>
-            <div className="grid grid-flow-col gap-0 p-10">
-                <div className="row-span-2 w-[300px]">Handle</div>
-                <div className="row-span-2 w-[100px]">Total</div>
-                {TableHead}
+            <div className="mx-[10%] my-10 overflow-x-scroll">
+                <div className="grid grid-flow-col gap-0 p-10">
+                    <div className="row-span-2 w-[300px]">Handle</div>
+                    <div className="row-span-2 w-[100px]">Total</div>
+                    {TableHead}
+                </div>
+                <div className="grid grid-flow-col gap-0">
+                    <TableBody Users={users} ChangeTotal={onUpdateScores} />
+                </div>
             </div>
-            <div className="grid grid-flow-col gap-0">
-                <TableBody Users={users} />
-            </div>
-        </div>
+        </>
     );
 }
 

@@ -1,5 +1,40 @@
 const Problemsets = [
     {
+        name: "OSN 2019",
+        problems: [
+            {
+                name: "1A",
+                title: "Mengumpulkan Peserta",
+                jid: "JIDPROGRlBKTuYDXdMyk52ipuWV",
+            },
+            {
+                name: "1B",
+                title: "Pertahanan Manado",
+                jid: "JIDPROGWaRGUEEI0SDrFURu97qv",
+            },
+            {
+                name: "1C",
+                title: "Rekreasi OSN",
+                jid: "",
+            },
+            {
+                name: "2A",
+                title: "Tempat Wisata",
+                jid: "",
+            },
+            {
+                name: "2B",
+                title: "Mencari Emas",
+                jid: "",
+            },
+            {
+                name: "2C",
+                title: "Penyebaran Hoaks",
+                jid: "",
+            }
+        ]
+    },
+    {
         name: "KSN 2020",
         problems: [
             {

@@ -11,8 +11,8 @@ const getMaxScore = (result) => {
     return maxScore;
 };
 
-function UserScores({ User }) {
-    let Score = new Array(1).fill(0);
+function UserScores({ User, ChangeTotal }) {
+    let Score = new Array(0).fill(0);
 
     const [scores, setScores] = useState(Score);
     const [totalScore, setTotalScore] = useState(0);
@@ -27,17 +27,8 @@ function UserScores({ User }) {
             });
     };
 
-    // const addScore = () => {
-    //     let newScores = scores.slice();
-    //     newScores.push(0);
-    //     console.log(newScores);
-    //     setScores(newScores.slice());
-    //     console.log(scores);
-    // };
-
     const updScore = (i, v) => {
         Score[i] = v;
-        console.log(Score);
         setScores(Score.slice());
     };
 
@@ -56,6 +47,9 @@ function UserScores({ User }) {
             Total += s;
         });
         setTotalScore(Total);
+        console.log(User.id);
+        console.log(Total);
+        ChangeTotal(User.id, Total);
     }, [scores]);
 
     return (
