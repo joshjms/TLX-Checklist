@@ -54,11 +54,11 @@ function UserScores({ User, ChangeTotal }) {
 
     return (
         <>
-            <div className="w-[300px]">{User.handle}</div>
-            <div className="w-[100px]"><strong>{totalScore}</strong></div>
+            <div className="w-[400px] p-10">{User.name}</div>
+            <div className="w-[150px] text-center p-10"><strong>{totalScore}</strong></div>
             {scores.map((score, i) => (
-                <div className="w-[100px]" id={i} key={i}>
-                    {score}
+                <div className="w-[100px] text-center p-10" id={i} key={i} style={{backgroundColor: (score === 100 ? 'rgb(44, 186, 0)' : score >= 80 ? 'rgb(163, 255, 0)' : score >= 50 ? 'rgb(255, 244, 0)' : score >= 30 ? 'rgb(255, 167, 0)' : 'rgb(255, 0, 0)')}}>
+                    <p style={{color: 'black'}}>{score}</p>
                 </div>
             ))}
         </>

@@ -1,5 +1,40 @@
 const Problemsets = [
     {
+        name: "OSN 2018",
+        problems: [
+            {
+                name: "1A",
+                title: "Jembatan Layang",
+                jid: "JIDPROGs2WN5ObE0McQCxdD0g3Y",
+            },
+            {
+                name: "1B",
+                title: "Pertahanan Padang",
+                jid: "JIDPROGbuQnRSs130zb9AHsFBAD",
+            },
+            {
+                name: "1C",
+                title: "Ojek Daring",
+                jid: "JIDPROGc95L0Zk7N5XW6ZhDfpgb",
+            },
+            {
+                name: "2A",
+                title: "Hiasan Atap",
+                jid: "JIDPROGMm4rM14cXg79GQXTkTIA",
+            },
+            {
+                name: "2B",
+                title: "Permainan Pajel",
+                jid: "JIDPROGpuD5d8PEZzuSoayOx9ne",
+            },
+            {
+                name: "2C",
+                title: "Festival FPB",
+                jid: "JIDPROGZwDSN8umwwTO1RaAtuMJ",
+            }
+        ]
+    },
+    {
         name: "OSN 2019",
         problems: [
             {
@@ -15,12 +50,12 @@ const Problemsets = [
             {
                 name: "1C",
                 title: "Rekreasi OSN",
-                jid: "",
+                jid: "JIDPROGM5I6r3cFLVsTGjxuBa0l",
             },
             {
                 name: "2A",
                 title: "Tempat Wisata",
-                jid: "",
+                jid: "JIDPROGW5g0X3YzauQ8mpy9MsgK",
             },
             {
                 name: "2B",

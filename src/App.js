@@ -6,9 +6,9 @@ import Problemsets from "./shared/Problemsets.js";
 
 import TableBody from "./components/TableBody";
 
-console.log(Users);
-
 let userList = Users.slice();
+
+console.log(userList);
 let userSorted = [];
 
 function App() {
@@ -20,16 +20,18 @@ function App() {
             <>
                 <>
                     <div
-                        className=""
+                        className="px-10 py-5 text-center"
                         style={{
                             gridColumn: `span ${problemset.problems.length}/span ${problemset.problems.length}`,
+                            width: `${problemset.problems.length}00px`,
+                            backgroundColor: 'rgb(42,48,60)',
                         }}
                     >
                         {problemset.name}
                     </div>
                     {problemset.problems.map((problem) => {
                         return (
-                            <div className="w-[100px] pt-10">
+                            <div className="w-[100px] px-10 py-5" style={{backgroundColor: 'rgb(42,48,60)'}}>
                                 {problem.name}
                             </div>
                         );
@@ -52,13 +54,13 @@ function App() {
         });
         setUsers(
             userSorted.filter((user) => {
-                return user.handle.startsWith(search);
+                return user.name.toLowerCase().startsWith(search.toLowerCase());
             })
         );
     };
 
     return (
-        <>  
+        <>
             <h1 className="text-5xl text-center my-10 font-bold">Scoreboard</h1>
             <div className="form-control w-[40%] m-auto">
                 <div className="input-group m-auto">
@@ -70,7 +72,7 @@ function App() {
                             setSearch(e.target.value);
                             console.log(e.target.value);
                             let filteredUsers = userSorted.filter((user) => {
-                                return user.handle.startsWith(e.target.value);
+                                return user.name.toLowerCase().startsWith(e.target.value.toLowerCase());
                             });
                             setUsers(filteredUsers.slice());
                         }}
@@ -93,10 +95,10 @@ function App() {
                     </button>
                 </div>
             </div>
-            <div className="mx-[10%] my-10 overflow-x-scroll">
-                <div className="grid grid-flow-col gap-0 p-10">
-                    <div className="row-span-2 w-[300px]">Handle</div>
-                    <div className="row-span-2 w-[100px]">Total</div>
+            <div className="mx-[10%] my-10 max-h-[1000px] overflow-scroll">
+                <div className="grid grid-flow-col gap-0 sticky top-0" style={{backgroundColor: 'rgb(42,48,60)'}}>
+                    <div className="row-span-2 w-[400px] text-center m-auto" >Name</div>
+                    <div className="row-span-2 w-[150px] text-center m-auto">Total</div>
                     {TableHead}
                 </div>
                 <div className="grid grid-flow-col gap-0">

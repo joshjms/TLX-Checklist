@@ -6,7 +6,7 @@ import UserScores from "./UserScores.js";
 function TableBody({ Users, ChangeTotal }) {
     let TableBody = Users.map((user, i) => {
         return (
-            <div className="grid grid-flow-col gap-0 border-t p-10" id={user.id} key={user.id}>
+            <div className="grid grid-flow-col gap-0 border-t" id={user.id} key={user.id}>
                 <UserScores User={user} ChangeTotal={ChangeTotal} key={user.id}/>
             </div>
         );
